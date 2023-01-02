@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-SemiBold.ttf">
+            <string>SourceSansPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NowPlayingCollectionCell" id="gTV-IL-0wX" customClass="NowPlayingCollectionCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="274" height="254"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="274" height="254"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yG-ux-D36">
+                        <rect key="frame" x="0.0" y="0.0" width="274" height="254"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Kd-FP-5f1">
+                                <rect key="frame" x="0.0" y="0.0" width="274" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="xU7-2a-emQ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dgM-cH-ETQ">
+                                <rect key="frame" x="0.0" y="200" width="40.5" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEK-GE-t90">
+                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1og-FY-2fb">
+                                        <rect key="frame" x="0.0" y="22.5" width="40.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dgM-cH-ETQ" secondAttribute="bottom" constant="10" id="5ra-N6-wEF"/>
+                            <constraint firstItem="1Kd-FP-5f1" firstAttribute="top" secondItem="3yG-ux-D36" secondAttribute="top" id="6Nv-jS-uql"/>
+                            <constraint firstAttribute="trailing" secondItem="1Kd-FP-5f1" secondAttribute="trailing" id="NQ4-zb-Byb"/>
+                            <constraint firstItem="dgM-cH-ETQ" firstAttribute="top" secondItem="1Kd-FP-5f1" secondAttribute="bottom" constant="10" id="TkK-jI-nJ2"/>
+                            <constraint firstItem="dgM-cH-ETQ" firstAttribute="leading" secondItem="1Kd-FP-5f1" secondAttribute="leading" id="p1n-YH-MZq"/>
+                            <constraint firstItem="1Kd-FP-5f1" firstAttribute="leading" secondItem="3yG-ux-D36" secondAttribute="leading" id="r0m-Ta-v0J"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dgM-cH-ETQ" secondAttribute="trailing" constant="10" id="wZu-cE-vp5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3yG-ux-D36" secondAttribute="trailing" id="48X-0r-7ka"/>
+                <constraint firstItem="3yG-ux-D36" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IJN-Jo-GeS"/>
+                <constraint firstAttribute="bottom" secondItem="3yG-ux-D36" secondAttribute="bottom" id="Nic-qp-yug"/>
+                <constraint firstItem="3yG-ux-D36" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="P7x-O5-ueq"/>
+            </constraints>
+            <size key="customSize" width="274" height="254"/>
+            <connections>
+                <outlet property="moviePoster" destination="1Kd-FP-5f1" id="UNG-N1-SbV"/>
+                <outlet property="movieRating" destination="1og-FY-2fb" id="QfT-SI-OWh"/>
+                <outlet property="movieTitle" destination="GEK-GE-t90" id="CKP-KU-aHv"/>
+            </connections>
+            <point key="canvasLocation" x="300" y="93.75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

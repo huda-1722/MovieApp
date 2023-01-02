@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-SemiBold.ttf">
+            <string>SourceSansPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularMoviesCollectionCell" id="gTV-IL-0wX" customClass="PopularMoviesCollectionCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kdo-Ot-TkC">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gNx-qy-syz">
+                                <rect key="frame" x="10" y="0.0" width="240" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="yq1-0T-rPL"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gh1-50-Uak">
+                                <rect key="frame" x="10" y="160" width="240" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHr-uc-kci">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Rating" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8be-80-EEl">
+                                        <rect key="frame" x="0.0" y="29.5" width="94.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gh1-50-Uak" firstAttribute="leading" secondItem="gNx-qy-syz" secondAttribute="leading" id="Dkk-XJ-AbX"/>
+                            <constraint firstAttribute="trailing" secondItem="Gh1-50-Uak" secondAttribute="trailing" constant="10" id="EAq-Bu-AEW"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Gh1-50-Uak" secondAttribute="bottom" constant="10" id="KmP-qB-ub3"/>
+                            <constraint firstItem="gNx-qy-syz" firstAttribute="top" secondItem="Kdo-Ot-TkC" secondAttribute="top" id="jEY-JE-oaN"/>
+                            <constraint firstAttribute="trailing" secondItem="gNx-qy-syz" secondAttribute="trailing" constant="10" id="jNh-Ya-An9"/>
+                            <constraint firstItem="Gh1-50-Uak" firstAttribute="top" secondItem="gNx-qy-syz" secondAttribute="bottom" constant="10" id="jQW-LI-xTB"/>
+                            <constraint firstItem="gNx-qy-syz" firstAttribute="leading" secondItem="Kdo-Ot-TkC" secondAttribute="leading" constant="10" id="xfI-TV-stE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Kdo-Ot-TkC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NLs-fA-DgW"/>
+                <constraint firstItem="Kdo-Ot-TkC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UUP-zL-oSy"/>
+                <constraint firstAttribute="trailing" secondItem="Kdo-Ot-TkC" secondAttribute="trailing" id="fvz-mZ-9r0"/>
+                <constraint firstAttribute="bottom" secondItem="Kdo-Ot-TkC" secondAttribute="bottom" id="ur9-hQ-cBH"/>
+            </constraints>
+            <size key="customSize" width="260" height="250"/>
+            <connections>
+                <outlet property="moviePoster" destination="gNx-qy-syz" id="hpO-Ct-KAb"/>
+                <outlet property="movieRating" destination="8be-80-EEl" id="9bc-RF-nLo"/>
+                <outlet property="movieTitle" destination="XHr-uc-kci" id="LCq-sg-RPs"/>
+            </connections>
+            <point key="canvasLocation" x="179.71014492753625" y="-78.348214285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
