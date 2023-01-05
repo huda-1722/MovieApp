@@ -17,17 +17,8 @@ class HomeVC : UIViewController {
     //====================================
     override func viewDidLoad() {
         super.viewDidLoad()
-        moviesTableView.delegate = self
-        moviesTableView.dataSource = self
-        moviesTableView.registerCell(with: PopluarMoviesTableCell.self)
-        moviesTableView.registerCell(with: NowPlayingTableCell.self)
-        self.navigationController?.navigationBar.isHidden = true
-        // Do any additional setup after loading the view.
-    }
-    private func moveToDetailVC(data : Int) {
-        let vc = MovieDetailVC.instantiate(fromAppStoryboard: .Main)
-        vc.movieId = data
-        self.navigationController?.pushViewController(vc, animated: true)
+        initialSetUp()
+        bindDelegate()
     }
 }
 
@@ -37,10 +28,15 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50.0
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueCell(with: NowPlayingTableCell.self)
@@ -80,9 +76,26 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
     }
     
 }
+//MARK: - Private Functions
+//==========================
+extension HomeVC {
+    private func moveToDetailVC(data : Int) {
+        let vc = MovieDetailVC.instantiate(fromAppStoryboard: .Main)
+        vc.movieId = data
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    private func initialSetUp() {
+        moviesTableView.registerCell(with: PopluarMoviesTableCell.self)
+        moviesTableView.registerCell(with: NowPlayingTableCell.self)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    private func bindDelegate() {
+        moviesTableView.delegate = self
+        moviesTableView.dataSource = self
+    }
+}
 extension UIViewController {
     class var storyboardID: String {
         return "\(self)"
     }
-    
 }

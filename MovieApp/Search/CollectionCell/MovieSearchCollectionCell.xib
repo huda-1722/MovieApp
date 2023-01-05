@@ -16,23 +16,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieSearchCollectionCell" id="gTV-IL-0wX" customClass="MovieSearchCollectionCell" customModule="MovieApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="264" height="221"/>
+            <rect key="frame" x="0.0" y="0.0" width="296" height="259"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="264" height="221"/>
+                <rect key="frame" x="0.0" y="0.0" width="296" height="259"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R7-iy-kJn">
-                        <rect key="frame" x="0.0" y="0.0" width="264" height="221"/>
+                        <rect key="frame" x="0.0" y="0.0" width="296" height="259"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SDl-KI-e6e">
-                                <rect key="frame" x="10" y="0.0" width="244" height="150"/>
+                                <rect key="frame" x="10" y="0.0" width="276" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Ief-Zx-G6z"/>
+                                    <constraint firstAttribute="height" constant="170" id="Ief-Zx-G6z"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N3h-0J-iiM">
-                                <rect key="frame" x="10" y="160" width="83.5" height="46"/>
+                                <rect key="frame" x="10" y="180" width="83.5" height="46"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Movie title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGw-lD-Kvt">
                                         <rect key="frame" x="0.0" y="0.0" width="83.5" height="19"/>
@@ -57,7 +57,7 @@
                             <constraint firstItem="SDl-KI-e6e" firstAttribute="leading" secondItem="0R7-iy-kJn" secondAttribute="leading" constant="10" id="c4z-WQ-xI0"/>
                             <constraint firstItem="SDl-KI-e6e" firstAttribute="top" secondItem="0R7-iy-kJn" secondAttribute="top" id="dwk-7l-bAe"/>
                             <constraint firstAttribute="trailing" secondItem="SDl-KI-e6e" secondAttribute="trailing" constant="10" id="lax-2d-gl1"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="N3h-0J-iiM" secondAttribute="trailing" constant="10" id="qNJ-Or-tdv"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="N3h-0J-iiM" secondAttribute="trailing" constant="5" id="qNJ-Or-tdv"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -69,13 +69,13 @@
                 <constraint firstItem="0R7-iy-kJn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Nfc-T1-AnM"/>
                 <constraint firstAttribute="bottom" secondItem="0R7-iy-kJn" secondAttribute="bottom" id="kx2-3g-gnY"/>
             </constraints>
-            <size key="customSize" width="264" height="221"/>
+            <size key="customSize" width="296" height="259"/>
             <connections>
                 <outlet property="moviePoster" destination="SDl-KI-e6e" id="dyJ-YX-OdJ"/>
                 <outlet property="movieRating" destination="gNI-kj-PK3" id="ewU-jJ-tS3"/>
                 <outlet property="movieTitle" destination="qGw-lD-Kvt" id="7Ce-I4-zkx"/>
             </connections>
-            <point key="canvasLocation" x="213.04347826086959" y="158.37053571428569"/>
+            <point key="canvasLocation" x="236.23188405797103" y="170.42410714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -20,8 +20,14 @@ class MovieSearchCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         moviePoster.layer.cornerRadius = 20
+        setFont()
         // Initialization code
     }
+    private func setFont() {
+        movieTitle.font = AppFonts.SourceSansProSemiBold.withSize(15)
+        movieRating.font = AppFonts.SourceSansProSemiBold.withSize(15)
+    }
+    
     //MARK: - populate Cell Data
     //===========================
     func populateData(data : CommonMovieResult) {
@@ -33,6 +39,4 @@ class MovieSearchCollectionCell: UICollectionViewCell {
        let urlStr = "https://image.tmdb.org/t/p/w500" + (data.posterPath ?? "")
        moviePoster.sd_setImage(with: URL(string: urlStr))
    }
-
-
 }

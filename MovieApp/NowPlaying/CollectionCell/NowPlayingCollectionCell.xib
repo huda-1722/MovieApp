@@ -26,13 +26,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="274" height="254"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Kd-FP-5f1">
-                                <rect key="frame" x="0.0" y="0.0" width="274" height="190"/>
+                                <rect key="frame" x="10" y="0.0" width="264" height="190"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="190" id="xU7-2a-emQ"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dgM-cH-ETQ">
-                                <rect key="frame" x="0.0" y="200" width="40.5" height="44"/>
+                                <rect key="frame" x="10" y="200" width="40.5" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEK-GE-t90">
                                         <rect key="frame" x="0.0" y="0.0" width="40.5" height="14.5"/>
@@ -55,8 +55,8 @@
                             <constraint firstItem="1Kd-FP-5f1" firstAttribute="top" secondItem="3yG-ux-D36" secondAttribute="top" id="6Nv-jS-uql"/>
                             <constraint firstAttribute="trailing" secondItem="1Kd-FP-5f1" secondAttribute="trailing" id="NQ4-zb-Byb"/>
                             <constraint firstItem="dgM-cH-ETQ" firstAttribute="top" secondItem="1Kd-FP-5f1" secondAttribute="bottom" constant="10" id="TkK-jI-nJ2"/>
+                            <constraint firstItem="1Kd-FP-5f1" firstAttribute="leading" secondItem="3yG-ux-D36" secondAttribute="leading" constant="10" id="Wir-94-lkh"/>
                             <constraint firstItem="dgM-cH-ETQ" firstAttribute="leading" secondItem="1Kd-FP-5f1" secondAttribute="leading" id="p1n-YH-MZq"/>
-                            <constraint firstItem="1Kd-FP-5f1" firstAttribute="leading" secondItem="3yG-ux-D36" secondAttribute="leading" id="r0m-Ta-v0J"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dgM-cH-ETQ" secondAttribute="trailing" constant="10" id="wZu-cE-vp5"/>
                         </constraints>
                     </view>
